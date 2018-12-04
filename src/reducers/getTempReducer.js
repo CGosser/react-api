@@ -15,7 +15,7 @@ const getTempReducer = (state = initialState, action) => {
   switch (action.type) {
   case 'EDIT_STATE':
     let newState = {
-      city: state.city,
+      city: action.city,
       temp: state.temp
     };
     return newState;
