@@ -1,1 +1,1 @@
-export const GET_TEMP = 'GET_TEMP';
+export const EDIT_STATE = 'EDIT_STATE';

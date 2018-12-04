@@ -5,6 +5,4 @@ const rootReducer = combineReducers({
   currentTemp: getTempReducer
 });
 
-console.log(rootReducer);
-
 export default rootReducer;
