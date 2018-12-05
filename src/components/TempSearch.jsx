@@ -1,8 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { fetchTemp } from './../actions/index'
 
 function TempSearch(props){
+  console.log(fetchTemp)
   let _city = null;
   function handleClick(e) {
     e.preventDefault();
@@ -11,6 +13,7 @@ function TempSearch(props){
       type: 'EDIT_STATE',
       city: _city.value
     };
+    fetchTemp(_city.value);
     dispatch(action);
     _city.value = '';
   }
