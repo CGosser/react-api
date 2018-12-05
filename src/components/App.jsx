@@ -8,13 +8,16 @@ class App extends React.Component {
 
   constructor(props) {
     super(props);
+    console.log(props);
   }
 
   render() {
     return (
       <div>
         <TempSearch />
-        <Results data={this.props}/>
+        <Results
+          city={this.props.city}
+          temp={this.props.temp}/>
       </div>
     );
   }
@@ -26,8 +29,8 @@ App.propTypes = {
 
 const mapStateToProps = state => {
   return {
-    city: state.currentTemp.city,
-    temp: state.currentTemp.temp
+    city: state.currentCity,
+    temp: state.currentTemp
   };
 };
 

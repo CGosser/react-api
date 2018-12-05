@@ -9,12 +9,7 @@ function TempSearch(props){
   function handleClick(e) {
     e.preventDefault();
     const { dispatch } = props;
-    const action = {
-      type: 'EDIT_STATE',
-      city: _city.value
-    };
-    fetchTemp(_city.value);
-    dispatch(action);
+    dispatch(fetchTemp(_city.value));
     _city.value = '';
   }
   return (

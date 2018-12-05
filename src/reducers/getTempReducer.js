@@ -11,14 +11,14 @@
 import constants from './../constants';
 const { initialState, types } = constants;
 
-const getTempReducer = (state = initialState, action) => {
+const getTempReducer = (state = initialState.temp, action) => {
   switch (action.type) {
-  case 'EDIT_STATE':
-    let newState = {
-      city: action.city,
-      temp: state.temp
-    };
-    return newState;
+  // case 'EDIT_STATE':
+  //   let newState = {
+  //     city: action.city,
+  //     temp: state.temp
+  //   };
+  //   return newState;
   default:
     return state;
   }
